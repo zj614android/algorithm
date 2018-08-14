@@ -16,7 +16,7 @@ int length(T& arr)
 
 int main() {
 
-	int  a[] = { 500,86,99,77,88,1,2};
+	int  a[] = { 500,86,1,77,55,24};
 	int len = length(a);
 	printArray(a,"排序前", len);
 	int *result = insertionSort(a, len);
@@ -43,16 +43,12 @@ int * insertionSort(int *a,int len) {
 	int historyIndex = 1;
 	//int length = sizeof(a) ;
 
-	cout << "length == " << len << endl;
 
 	for (int i = 0; i < len; i++){
 
-		//狗日的C++还没有数组越界异常啊。。。还必须这么弄啊。。。
-		if (i + 1 == len) {
-			return a;
-		}
+		historyIndex = i;
 
-		if (a[i + 1] < a[i]) {
+		if (i + 1 < len && a[i + 1] < a[i]) {
 
 			int temp = a[i];
 			a[i] = a[i + 1];
@@ -68,7 +64,7 @@ int * insertionSort(int *a,int len) {
 
 		}
 
-		historyIndex = i;
+	
 	}
 
 	return a;
