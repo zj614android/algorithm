@@ -15,10 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Insertion.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="Shell.cpp">
+    <ClCompile Include="ShellSort.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
